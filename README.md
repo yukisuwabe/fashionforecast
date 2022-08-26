@@ -3,11 +3,11 @@ This repository is only for the backend component of the project.
 ## What this app does:
 By inputting the clothes you have in your closet, this app is able to automatically generate an outfit for the day based on the weather of the day.
 
-##What this repository does in the app:
+## What this repository does in the app:
 I implemented routes that get the weather, clothes associated with the user, and basic user information. Users have the location attribute to specify the location of the user using zip code. I also implemented a POST route that allowed the user to upload their information, post the clothes to their information, and the photos of the clothes. For the clothes, it has the warmth attribute to gauge how warm each clothes are and the type of clothing attribute to categorize it into a top, bottom, jacket, or shoes. In order to get the information for the weather, I used the OpenWeather API to select the clothes based on the temperature of the location. I implemented a route that selects the clothes that match the temperature of the person’s location.
 
-####GET /
-#####Response:
+#### GET /
+##### Response:
 ```
 {
    "success": true,
@@ -58,15 +58,15 @@ I implemented routes that get the weather, clothes associated with the user, and
 }
 ```
 
-####POST /user/
-#####Request:
+#### POST /user/
+##### Request:
 ```
 {
    "name": "Yuki Suwabe",
    "location": "14853"
 }
 ```
-#####Response:
+##### Response:
 ```
 {
    "success": true,
@@ -78,8 +78,8 @@ I implemented routes that get the weather, clothes associated with the user, and
    }
 }
 ```
-####GET /user/{user_id}
-#####Response:
+#### GET /user/{user_id}
+##### Response:
 ```
 {
    "success": true,
@@ -91,8 +91,8 @@ I implemented routes that get the weather, clothes associated with the user, and
    }
 }
 ```
-####POST /{user_id}/clothing/
-#####Request:
+#### POST /{user_id}/clothing/
+##### Request:
 ```
 {
    "name": "Tennis Skirt",
@@ -100,7 +100,7 @@ I implemented routes that get the weather, clothes associated with the user, and
    "typeOfClothes": "top" or “bottom” or “jacket” or “shoes”
 }
 ```
-#####Response:
+##### Response:
 ```
 {
    "success": true,
@@ -118,14 +118,14 @@ I implemented routes that get the weather, clothes associated with the user, and
    }
 }
 ```
-####POST /{clothing_id}/picture/
-#####Request:
+#### POST /{clothing_id}/picture/
+##### Request:
 ```
 {
    "image_data": "<base64 form of image>"
 }
 ```
-######Response:
+###### Response:
 ```
 {
    "success": true,
@@ -140,8 +140,8 @@ I implemented routes that get the weather, clothes associated with the user, and
    }
 }
 ```
-####GET /{user_id}/clothing/
-#####Response:
+#### GET /{user_id}/clothing/
+##### Response:
 ```
 {
    "success": true,
@@ -167,8 +167,8 @@ I implemented routes that get the weather, clothes associated with the user, and
    }
 }
 ```
-####GET /{user_id}/weather/
-#####Response:
+#### GET /{user_id}/weather/
+##### Response:
 ```
 {
    "success": true,
@@ -219,8 +219,8 @@ I implemented routes that get the weather, clothes associated with the user, and
 }
 ```
 
-####GET /{user_id}/{typeOfClothes}/select/
-#####Response:
+#### GET /{user_id}/{typeOfClothes}/select/
+##### Response:
 ```
 {
    "success": true,
